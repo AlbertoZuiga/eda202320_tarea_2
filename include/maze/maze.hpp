@@ -4,6 +4,7 @@
 #define MAZE_HPP_
 
 #include <vector>
+#include "lLists/pair.hpp"
 
 namespace maze {
 	typedef unsigned char uchar;
@@ -20,8 +21,7 @@ namespace maze {
 	public:
 		static const unsigned char WALL;
 		static const unsigned char EMPTY;
-		static const unsigned char SOLUTION_S;
-		static const unsigned char SOLUTION_Q;
+		static const unsigned char SOLUTION;
 		static const int NORTH;
 		static const int SOUTH;
 		static const int EAST;
@@ -31,8 +31,10 @@ namespace maze {
 		void reset_maze(int h, int w);
 		bool inRange(int i, int j);
 		void print();
-		void solveStack(int f1, int c1, int f2, int c2);
-		void solveQueue(int r1, int c1, int r2, int c2);
+		void print(std::vector<llist::Pair> solution);
+		void printSolution(int type);
+		std::vector<llist::Pair> solveStack(int f1, int c1, int f2, int c2);
+		std::vector<llist::Pair> solveQueue(int r1, int c1, int r2, int c2);
 	};
 } // namespace maze
 

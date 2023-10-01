@@ -11,8 +11,7 @@ namespace maze{
 
 const unsigned char Maze::WALL  = '@';
 const unsigned char Maze::EMPTY = '-';
-const unsigned char Maze::SOLUTION_Q = 'q';
-const unsigned char Maze::SOLUTION_S = 's';
+const unsigned char Maze::SOLUTION = 'x';
 const int Maze::NORTH= 0;
 const int Maze::SOUTH= 1;
 const int Maze::EAST= 2;
@@ -117,17 +116,11 @@ void Maze::print(){
 	for (int i = 0; i < height; i++){
 		std::cout << "|";
 		for (int j = 0; j < width; j++){
-			if (grid[i][j] == 0) {
-				std::cout << EMPTY;
-			}
-			else if (grid[i][j] == 1) {
+			if (grid[i][j] == 1) {
 				std::cout << WALL;
 			}
-			else if (grid[i][j] == 2) {
-				std::cout << SOLUTION_S;
-			}
-			else if (grid[i][j] == 3) {
-				std::cout << SOLUTION_Q;
+			else {
+				std::cout << EMPTY;
 			}
 		}
 		std::cout << "|";
@@ -141,10 +134,73 @@ void Maze::print(){
 	std::cout << std::endl;
 }
 
-void Maze::solveStack(int r1, int c1, int r2, int c2) {
-	if (grid[r1][c1] == 1 || grid[r2][c2] == 1) {
+void Maze::print(std::vector<llist::Pair> solution){
+	std::cout << "Se recorrieron " << solution.size() << " nodos para llegar desde el nodo inicial al nodo final" << std::endl;
+	for (int i = 0; i < solution.size(); i++){
+		solution[i].print();
+		if (i==solution.size()-1){
+			std::cout << std::endl;
+		}
+		else {
+			std::cout << "->";
+		}
+	}
+}
+
+void Maze::printSolution(int type){
+	// type 0 corresponde a stack, type 1 corresponde a queue
+	if (type == 0){
+		std::cout << "Solución Stack" << std::endl;
+	}
+	else if (type == 1){
+		std::cout << "Solución Queue" << std::endl;
+	}
+	else {
+		std::cout << "El tipo ingresado no es valido (0 -> Stack, 1 -> Queue)" << std::endl;
+		return;
+	}
+	type += 2;
+	
+	char LIMIT = '=';
+	std::cout << " Maze ( "<< height << " x " << width << " ) " << std::endl;
+	std::cout << " ";
+	for (int j = 0; j < width; j++){
+		std::cout << LIMIT;
+	}
+	std::cout << " ";
+	std::cout << std::endl;
+	for (int i = 0; i < height; i++){
+		std::cout << "|";
+		for (int j = 0; j < width; j++){
+			if (grid[i][j]== 0){
+				std::cout << EMPTY;
+			}
+			else if (grid[i][j] == 1) {
+				std::cout << WALL;
+			}
+			else if ((grid[i][j]== type) || (grid[i][j]== 4)){
+				std::cout << SOLUTION;
+			}
+			else {
+				std::cout << grid[i][j];
+			}
+		}
+		std::cout << "|";
+		std::cout << std::endl;
+	}
+	std::cout << " ";
+	for (int j = 0; j < width; j++){
+		std::cout << LIMIT;
+	}
+	std::cout << " ";
+	std::cout << std::endl;
+}
+
+std::vector<llist::Pair> Maze::solveStack(int r1, int c1, int r2, int c2) {
+	std::vector<llist::Pair> solution;
+    if (grid[r1][c1] == 1 || grid[r2][c2] == 1) {
         std::cout << "La posición inicial o final es una pared. No se puede encontrar una solución." << std::endl;
-        return;
+        return solution;
     }
 
     llist::Stack stack;
@@ -160,18 +216,36 @@ void Maze::solveStack(int r1, int c1, int r2, int c2) {
         int row = current->getRow();
         int col = current->getCol();
         if (row == r2 && col == c2) {
-			grid[r1][c1] = 2;
-			grid[r2][c2] = 2;
+			if (grid[r1][c1] == 3){
+				grid[r1][c1] = 4;
+			}
+			else {
+				grid[r1][c1] = 2;
+			};
+			if (grid[r2][c2] == 3){
+				grid[r2][c2] = 4;
+			}
+			else {
+				grid[r2][c2] = 2;
+			};
+
 			while(!solutionPath.empty()) {
 				if (current == solutionPath.back().curr){
-					grid[row][col] = 2;
+					solution.insert(solution.begin(), *current);
+					if (grid[row][col] == 3){
+						grid[row][col] = 4;
+					}
+					else {
+						grid[row][col] = 2;
+					};
 					current = solutionPath.back().prev;
 				}
 				row = current->getRow();
 				col = current->getCol();
 				solutionPath.pop_back();
 			};
-			break;
+			solution.insert(solution.begin(), llist::Pair (r1,c1));
+			return solution;
         }
 
 		shuffle_dir();
@@ -201,7 +275,7 @@ void Maze::solveStack(int r1, int c1, int r2, int c2) {
 			next_row = row + (drow);
 			next_col = col + (dcol);
 
-            if (inRange(next_row, next_col) && grid[next_row][next_col] == 0 && !visited[next_row][next_col]) {
+            if (inRange(next_row, next_col) && grid[next_row][next_col] != 1 && !visited[next_row][next_col]) {
                 stack.push(next_row, next_col);
                 visited[next_row][next_col] = true;
 				solutionPath.push_back(llist::CellPair(current, stack.top()->getData()));
@@ -211,12 +285,14 @@ void Maze::solveStack(int r1, int c1, int r2, int c2) {
 	if (grid[r1][c1]!=2){
 		std::cout << "El laberinto no tiene solucion" << std::endl;
 	}
+	return solution;
 }
 
-void Maze::solveQueue(int r1, int c1, int r2, int c2) {
+std::vector<llist::Pair> Maze::solveQueue(int r1, int c1, int r2, int c2) {
+	std::vector<llist::Pair> solution;
     if (grid[r1][c1] == 1 || grid[r2][c2] == 1) {
         std::cout << "La posición inicial o final es una pared. No se puede encontrar una solución." << std::endl;
-        return;
+        return solution;
     }
 
     llist::Queue queue;
@@ -233,18 +309,35 @@ void Maze::solveQueue(int r1, int c1, int r2, int c2) {
         int col = current->getCol();
 
         if (row == r2 && col == c2) {
-            grid[r1][c1] = 3;
-			grid[r2][c2] = 3;
+			if (grid[r1][c1] == 2){
+				grid[r1][c1] = 4;
+			}
+			else {
+				grid[r1][c1] = 3;
+			};
+			if (grid[r2][c2] == 2){
+				grid[r2][c2] = 4;
+			}
+			else {
+				grid[r2][c2] = 3;
+			};
             while (!solutionPath.empty()) {
 				if (current == solutionPath.back().curr){
-					grid[row][col] = 3;
+					solution.insert(solution.begin(),*current);
+					if (grid[row][col] == 2){
+						grid[row][col] = 4;
+					}
+					else {
+						grid[row][col] = 3;
+					};
 					current = solutionPath.back().prev;
 				}
                 row = current->getRow();
 				col = current->getCol();
 				solutionPath.pop_back();
             }
-            break;
+			solution.insert(solution.begin(), llist::Pair (r1,c1));
+			return solution;
         }
 
         shuffle_dir();
@@ -271,7 +364,7 @@ void Maze::solveQueue(int r1, int c1, int r2, int c2) {
             next_row = row + drow;
             next_col = col + dcol;
 
-            if (inRange(next_row, next_col) && grid[next_row][next_col] == 0 && !visited[next_row][next_col]) {
+            if (inRange(next_row, next_col) && grid[next_row][next_col] != 1 && !visited[next_row][next_col]) {
                 llist::Node* temp = new llist::Node(next_row, next_col);
 				queue.push(temp);
                 visited[next_row][next_col] = true;
@@ -282,6 +375,7 @@ void Maze::solveQueue(int r1, int c1, int r2, int c2) {
 	if (grid[r1][c1] != 3){
 		std::cout << "El laberinto no tiene solucion" << std::endl;
 	}
+	return solution;
 }
 
 }

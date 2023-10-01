@@ -50,9 +50,9 @@ CMakeFiles/test.dir/src/maze.cpp.o: ../src/maze.cpp \
   /usr/include/c++/11/bits/hash_bytes.h \
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/vector.tcc \
+  ../include/lLists/pair.hpp \
   ../include/lLists/stack.hpp \
   ../include/lLists/node.hpp \
-  ../include/lLists/pair.hpp \
   ../include/lLists/queue.hpp \
   /usr/include/c++/11/cstdlib \
   /usr/include/stdlib.h \
@@ -919,8 +919,8 @@ CMakeFiles/test.dir/test/test.cpp.o: ../test/test.cpp \
   /usr/include/c++/11/bits/stl_vector.h \
   /usr/include/c++/11/bits/stl_bvector.h \
   /usr/include/c++/11/bits/vector.tcc \
-  ../include/lLists/node.hpp \
   ../include/lLists/pair.hpp \
+  ../include/lLists/node.hpp \
   ../include/lLists/queue.hpp \
   ../include/lLists/stack.hpp
 

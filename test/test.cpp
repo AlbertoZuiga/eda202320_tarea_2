@@ -7,8 +7,15 @@ using namespace maze;
 
 int main(int nargs, char** vargs){
 	Maze laberinto(21,21);
-	//laberinto.solveQueue(0,10,20,10);
-	laberinto.solveStack(0,10,20,10);
 	laberinto.print();
+
+	std::vector<llist::Pair> solution_queue = laberinto.solveQueue(0,10,20,10);
+	laberinto.print(solution_queue);
+	laberinto.printSolution(1);
+
+	std::vector<llist::Pair> solution_stack = laberinto.solveStack(0,10,20,10);
+	laberinto.print(solution_stack);
+	laberinto.printSolution(0);
+	
 	return 0;
 }

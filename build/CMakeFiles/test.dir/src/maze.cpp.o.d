@@ -43,9 +43,9 @@ CMakeFiles/test.dir/src/maze.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
+ /home/edauandes/Desktop/tareas/tarea_2/include/lLists/pair.hpp \
  /home/edauandes/Desktop/tareas/tarea_2/include/lLists/stack.hpp \
  /home/edauandes/Desktop/tareas/tarea_2/include/lLists/node.hpp \
- /home/edauandes/Desktop/tareas/tarea_2/include/lLists/pair.hpp \
  /home/edauandes/Desktop/tareas/tarea_2/include/lLists/queue.hpp \
  /usr/include/c++/11/cstdlib /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

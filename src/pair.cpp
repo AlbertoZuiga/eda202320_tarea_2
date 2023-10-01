@@ -30,7 +30,7 @@ int Pair::getCol(){
 }
 
 void Pair::print(){
-	std::cout << "("<< row << "," << col << ")" << std::endl;
+	std::cout << "("<< row << "," << col << ")";
 }
 
 Pair::~Pair() {

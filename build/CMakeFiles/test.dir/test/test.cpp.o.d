@@ -149,7 +149,7 @@ CMakeFiles/test.dir/test/test.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/edauandes/Desktop/tareas/tarea_2/include/lLists/node.hpp \
  /home/edauandes/Desktop/tareas/tarea_2/include/lLists/pair.hpp \
+ /home/edauandes/Desktop/tareas/tarea_2/include/lLists/node.hpp \
  /home/edauandes/Desktop/tareas/tarea_2/include/lLists/queue.hpp \
  /home/edauandes/Desktop/tareas/tarea_2/include/lLists/stack.hpp
