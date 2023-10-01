@@ -162,7 +162,6 @@ void Maze::solveStack(int r1, int c1, int r2, int c2) {
         if (row == r2 && col == c2) {
 			grid[r1][c1] = 2;
 			grid[r2][c2] = 2;
-			current = solutionPath.back().prev;
 			while(!solutionPath.empty()) {
 				if (current == solutionPath.back().curr){
 					grid[row][col] = 2;
@@ -236,7 +235,6 @@ void Maze::solveQueue(int r1, int c1, int r2, int c2) {
         if (row == r2 && col == c2) {
             grid[r1][c1] = 3;
 			grid[r2][c2] = 3;
-			current = solutionPath.back().prev;
             while (!solutionPath.empty()) {
 				if (current == solutionPath.back().curr){
 					grid[row][col] = 3;
