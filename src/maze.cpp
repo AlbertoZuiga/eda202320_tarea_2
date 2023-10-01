@@ -116,11 +116,11 @@ void Maze::print(){
 	for (int i = 0; i < height; i++){
 		std::cout << "|";
 		for (int j = 0; j < width; j++){
-			if (grid[i][j] == 1) {
-				std::cout << WALL;
-			}
-			else {
+			if (grid[i][j] == 0) {
 				std::cout << EMPTY;
+			}
+			else if (grid[i][j] == 1) {
+				std::cout << WALL;
 			}
 		}
 		std::cout << "|";
@@ -131,7 +131,7 @@ void Maze::print(){
 		std::cout << LIMIT;
 	}
 	std::cout << " ";
-	std::cout << std::endl;
+	std::cout << std::endl << std::endl;
 }
 
 void Maze::print(std::vector<llist::Pair> solution){
@@ -147,42 +147,31 @@ void Maze::print(std::vector<llist::Pair> solution){
 	}
 }
 
-void Maze::printSolution(int type){
-	// type 0 corresponde a stack, type 1 corresponde a queue
-	if (type == 0){
-		std::cout << "Solución Stack" << std::endl;
+void Maze::printSolution(std::vector<llist::Pair> solution){
+	uchar** temporary_grid = grid;
+	for (int i = 0; i < solution.size(); i++) {
+		temporary_grid[solution[i].getRow()][solution[i].getCol()] = 2;
 	}
-	else if (type == 1){
-		std::cout << "Solución Queue" << std::endl;
-	}
-	else {
-		std::cout << "El tipo ingresado no es valido (0 -> Stack, 1 -> Queue)" << std::endl;
-		return;
-	}
-	type += 2;
-	
+
 	char LIMIT = '=';
-	std::cout << " Maze ( "<< height << " x " << width << " ) " << std::endl;
 	std::cout << " ";
 	for (int j = 0; j < width; j++){
 		std::cout << LIMIT;
 	}
 	std::cout << " ";
 	std::cout << std::endl;
+	int count = 0;
 	for (int i = 0; i < height; i++){
 		std::cout << "|";
 		for (int j = 0; j < width; j++){
-			if (grid[i][j]== 0){
+			if (temporary_grid[i][j] == 0) {
 				std::cout << EMPTY;
 			}
-			else if (grid[i][j] == 1) {
+			else if (temporary_grid[i][j] == 1) {
 				std::cout << WALL;
 			}
-			else if ((grid[i][j]== type) || (grid[i][j]== 4)){
+			else if (temporary_grid[i][j] == 2) {
 				std::cout << SOLUTION;
-			}
-			else {
-				std::cout << grid[i][j];
 			}
 		}
 		std::cout << "|";
@@ -193,7 +182,7 @@ void Maze::printSolution(int type){
 		std::cout << LIMIT;
 	}
 	std::cout << " ";
-	std::cout << std::endl;
+	std::cout << std::endl << std::endl;
 }
 
 std::vector<llist::Pair> Maze::solveStack(int r1, int c1, int r2, int c2) {
@@ -216,28 +205,9 @@ std::vector<llist::Pair> Maze::solveStack(int r1, int c1, int r2, int c2) {
         int row = current->getRow();
         int col = current->getCol();
         if (row == r2 && col == c2) {
-			if (grid[r1][c1] == 3){
-				grid[r1][c1] = 4;
-			}
-			else {
-				grid[r1][c1] = 2;
-			};
-			if (grid[r2][c2] == 3){
-				grid[r2][c2] = 4;
-			}
-			else {
-				grid[r2][c2] = 2;
-			};
-
 			while(!solutionPath.empty()) {
 				if (current == solutionPath.back().curr){
 					solution.insert(solution.begin(), *current);
-					if (grid[row][col] == 3){
-						grid[row][col] = 4;
-					}
-					else {
-						grid[row][col] = 2;
-					};
 					current = solutionPath.back().prev;
 				}
 				row = current->getRow();
@@ -309,27 +279,9 @@ std::vector<llist::Pair> Maze::solveQueue(int r1, int c1, int r2, int c2) {
         int col = current->getCol();
 
         if (row == r2 && col == c2) {
-			if (grid[r1][c1] == 2){
-				grid[r1][c1] = 4;
-			}
-			else {
-				grid[r1][c1] = 3;
-			};
-			if (grid[r2][c2] == 2){
-				grid[r2][c2] = 4;
-			}
-			else {
-				grid[r2][c2] = 3;
-			};
             while (!solutionPath.empty()) {
 				if (current == solutionPath.back().curr){
 					solution.insert(solution.begin(),*current);
-					if (grid[row][col] == 2){
-						grid[row][col] = 4;
-					}
-					else {
-						grid[row][col] = 3;
-					};
 					current = solutionPath.back().prev;
 				}
                 row = current->getRow();

@@ -12,8 +12,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 #add_subdirectory(src)
 #add_subdirectory(tests)
 
-add_executable(test test/test.cpp src/maze.cpp src/pair.cpp src/node.cpp src/queue.cpp src/stack.cpp)
-target_include_directories(test PUBLIC ${PROJECT_SOURCE_DIR}/include)
+add_executable(laberinto test/tarea_2.cpp src/maze.cpp src/pair.cpp src/node.cpp src/queue.cpp src/stack.cpp)
+target_include_directories(laberinto PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 
 # add the executable

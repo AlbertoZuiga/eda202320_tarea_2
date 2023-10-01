@@ -11,11 +11,11 @@ int main(int nargs, char** vargs){
 
 	std::vector<llist::Pair> solution_queue = laberinto.solveQueue(0,10,20,10);
 	laberinto.print(solution_queue);
-	laberinto.printSolution(1);
-
+	laberinto.printSolution(solution_queue);
+	
 	std::vector<llist::Pair> solution_stack = laberinto.solveStack(0,10,20,10);
 	laberinto.print(solution_stack);
-	laberinto.printSolution(0);
+	laberinto.printSolution(solution_stack);
 	
 	return 0;
 }

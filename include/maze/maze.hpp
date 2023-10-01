@@ -32,7 +32,7 @@ namespace maze {
 		bool inRange(int i, int j);
 		void print();
 		void print(std::vector<llist::Pair> solution);
-		void printSolution(int type);
+		void printSolution(std::vector<llist::Pair> solution);
 		std::vector<llist::Pair> solveStack(int f1, int c1, int f2, int c2);
 		std::vector<llist::Pair> solveQueue(int r1, int c1, int r2, int c2);
 	};
