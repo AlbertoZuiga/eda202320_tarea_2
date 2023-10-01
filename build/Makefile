@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named laberinto
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
+laberinto: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laberinto
+.PHONY : laberinto
 
 # fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
+laberinto/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/build
+.PHONY : laberinto/fast
 
 src/maze.o: src/maze.cpp.o
 .PHONY : src/maze.o
 
 # target to build an object file
 src/maze.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/maze.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/maze.cpp.o
 .PHONY : src/maze.cpp.o
 
 src/maze.i: src/maze.cpp.i
@@ -142,7 +142,7 @@ src/maze.i: src/maze.cpp.i
 
 # target to preprocess a source file
 src/maze.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/maze.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/maze.cpp.i
 .PHONY : src/maze.cpp.i
 
 src/maze.s: src/maze.cpp.s
@@ -150,7 +150,7 @@ src/maze.s: src/maze.cpp.s
 
 # target to generate assembly for a file
 src/maze.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/maze.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/maze.cpp.s
 .PHONY : src/maze.cpp.s
 
 src/node.o: src/node.cpp.o
@@ -158,7 +158,7 @@ src/node.o: src/node.cpp.o
 
 # target to build an object file
 src/node.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/node.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/node.cpp.o
 .PHONY : src/node.cpp.o
 
 src/node.i: src/node.cpp.i
@@ -166,7 +166,7 @@ src/node.i: src/node.cpp.i
 
 # target to preprocess a source file
 src/node.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/node.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/node.cpp.i
 .PHONY : src/node.cpp.i
 
 src/node.s: src/node.cpp.s
@@ -174,7 +174,7 @@ src/node.s: src/node.cpp.s
 
 # target to generate assembly for a file
 src/node.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/node.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/node.cpp.s
 .PHONY : src/node.cpp.s
 
 src/pair.o: src/pair.cpp.o
@@ -182,7 +182,7 @@ src/pair.o: src/pair.cpp.o
 
 # target to build an object file
 src/pair.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/pair.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/pair.cpp.o
 .PHONY : src/pair.cpp.o
 
 src/pair.i: src/pair.cpp.i
@@ -190,7 +190,7 @@ src/pair.i: src/pair.cpp.i
 
 # target to preprocess a source file
 src/pair.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/pair.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/pair.cpp.i
 .PHONY : src/pair.cpp.i
 
 src/pair.s: src/pair.cpp.s
@@ -198,7 +198,7 @@ src/pair.s: src/pair.cpp.s
 
 # target to generate assembly for a file
 src/pair.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/pair.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/pair.cpp.s
 .PHONY : src/pair.cpp.s
 
 src/queue.o: src/queue.cpp.o
@@ -206,7 +206,7 @@ src/queue.o: src/queue.cpp.o
 
 # target to build an object file
 src/queue.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/queue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/queue.cpp.o
 .PHONY : src/queue.cpp.o
 
 src/queue.i: src/queue.cpp.i
@@ -214,7 +214,7 @@ src/queue.i: src/queue.cpp.i
 
 # target to preprocess a source file
 src/queue.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/queue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/queue.cpp.i
 .PHONY : src/queue.cpp.i
 
 src/queue.s: src/queue.cpp.s
@@ -222,7 +222,7 @@ src/queue.s: src/queue.cpp.s
 
 # target to generate assembly for a file
 src/queue.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/queue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/queue.cpp.s
 .PHONY : src/queue.cpp.s
 
 src/stack.o: src/stack.cpp.o
@@ -230,7 +230,7 @@ src/stack.o: src/stack.cpp.o
 
 # target to build an object file
 src/stack.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/stack.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/stack.cpp.o
 .PHONY : src/stack.cpp.o
 
 src/stack.i: src/stack.cpp.i
@@ -238,7 +238,7 @@ src/stack.i: src/stack.cpp.i
 
 # target to preprocess a source file
 src/stack.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/stack.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/stack.cpp.i
 .PHONY : src/stack.cpp.i
 
 src/stack.s: src/stack.cpp.s
@@ -246,32 +246,32 @@ src/stack.s: src/stack.cpp.s
 
 # target to generate assembly for a file
 src/stack.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/stack.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/src/stack.cpp.s
 .PHONY : src/stack.cpp.s
 
-test/test.o: test/test.cpp.o
-.PHONY : test/test.o
+test/tarea_2.o: test/tarea_2.cpp.o
+.PHONY : test/tarea_2.o
 
 # target to build an object file
-test/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.o
-.PHONY : test/test.cpp.o
+test/tarea_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/test/tarea_2.cpp.o
+.PHONY : test/tarea_2.cpp.o
 
-test/test.i: test/test.cpp.i
-.PHONY : test/test.i
+test/tarea_2.i: test/tarea_2.cpp.i
+.PHONY : test/tarea_2.i
 
 # target to preprocess a source file
-test/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.i
-.PHONY : test/test.cpp.i
+test/tarea_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/test/tarea_2.cpp.i
+.PHONY : test/tarea_2.cpp.i
 
-test/test.s: test/test.cpp.s
-.PHONY : test/test.s
+test/tarea_2.s: test/tarea_2.cpp.s
+.PHONY : test/tarea_2.s
 
 # target to generate assembly for a file
-test/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test/test.cpp.s
-.PHONY : test/test.cpp.s
+test/tarea_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/test/tarea_2.cpp.s
+.PHONY : test/tarea_2.cpp.s
 
 # Help Target
 help:
@@ -281,7 +281,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... laberinto"
 	@echo "... src/maze.o"
 	@echo "... src/maze.i"
 	@echo "... src/maze.s"
@@ -297,9 +297,9 @@ help:
 	@echo "... src/stack.o"
 	@echo "... src/stack.i"
 	@echo "... src/stack.s"
-	@echo "... test/test.o"
-	@echo "... test/test.i"
-	@echo "... test/test.s"
+	@echo "... test/tarea_2.o"
+	@echo "... test/tarea_2.i"
+	@echo "... test/tarea_2.s"
 .PHONY : help
 
 

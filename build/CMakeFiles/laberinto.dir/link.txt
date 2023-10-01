@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/laberinto.dir/test/tarea_2.cpp.o CMakeFiles/laberinto.dir/src/maze.cpp.o CMakeFiles/laberinto.dir/src/pair.cpp.o CMakeFiles/laberinto.dir/src/node.cpp.o CMakeFiles/laberinto.dir/src/queue.cpp.o CMakeFiles/laberinto.dir/src/stack.cpp.o -o laberinto 

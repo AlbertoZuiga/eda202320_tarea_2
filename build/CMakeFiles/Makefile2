@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/edauandes/Desktop/tareas/tarea_2/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/test.dir/all
+all: CMakeFiles/laberinto.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/test.dir/clean
+clean: CMakeFiles/laberinto.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test.dir
+# Target rules for target CMakeFiles/laberinto.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
+CMakeFiles/laberinto.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target laberinto"
+.PHONY : CMakeFiles/laberinto.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
+CMakeFiles/laberinto.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/laberinto.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
+.PHONY : CMakeFiles/laberinto.dir/rule
 
 # Convenience name for target.
-test: CMakeFiles/test.dir/rule
-.PHONY : test
+laberinto: CMakeFiles/laberinto.dir/rule
+.PHONY : laberinto
 
 # clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
+CMakeFiles/laberinto.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laberinto.dir/build.make CMakeFiles/laberinto.dir/clean
+.PHONY : CMakeFiles/laberinto.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
