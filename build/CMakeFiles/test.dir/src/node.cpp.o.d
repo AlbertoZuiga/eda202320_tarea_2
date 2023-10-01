@@ -1,6 +1,9 @@
-CMakeFiles/test.dir/test/test.cpp.o: \
- /home/edauandes/Desktop/tareas/tarea_2/test/test.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/test.dir/src/node.cpp.o: \
+ /home/edauandes/Desktop/tareas/tarea_2/src/node.cpp \
+ /usr/include/stdc-predef.h \
+ /home/edauandes/Desktop/tareas/tarea_2/include/lLists/node.hpp \
+ /home/edauandes/Desktop/tareas/tarea_2/include/lLists/pair.hpp \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -143,13 +146,4 @@ CMakeFiles/test.dir/test/test.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc \
- /home/edauandes/Desktop/tareas/tarea_2/include/maze/maze.hpp \
- /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc \
- /home/edauandes/Desktop/tareas/tarea_2/include/lLists/node.hpp \
- /home/edauandes/Desktop/tareas/tarea_2/include/lLists/pair.hpp \
- /home/edauandes/Desktop/tareas/tarea_2/include/lLists/queue.hpp \
- /home/edauandes/Desktop/tareas/tarea_2/include/lLists/stack.hpp
+ /usr/include/c++/11/bits/istream.tcc

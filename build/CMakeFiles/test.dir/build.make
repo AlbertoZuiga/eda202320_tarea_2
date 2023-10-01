@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edauandes/tareas/tarea_2
+CMAKE_SOURCE_DIR = /home/edauandes/Desktop/tareas/tarea_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edauandes/tareas/tarea_2/build
+CMAKE_BINARY_DIR = /home/edauandes/Desktop/tareas/tarea_2/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/test.dir/depend.make
@@ -72,44 +72,108 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test/test.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test/test.cpp.o: ../test/test.cpp
 CMakeFiles/test.dir/test/test.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test/test.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/test.cpp.o -MF CMakeFiles/test.dir/test/test.cpp.o.d -o CMakeFiles/test.dir/test/test.cpp.o -c /home/edauandes/tareas/tarea_2/test/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test/test.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/test/test.cpp.o -MF CMakeFiles/test.dir/test/test.cpp.o.d -o CMakeFiles/test.dir/test/test.cpp.o -c /home/edauandes/Desktop/tareas/tarea_2/test/test.cpp
 
 CMakeFiles/test.dir/test/test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test/test.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/tareas/tarea_2/test/test.cpp > CMakeFiles/test.dir/test/test.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/Desktop/tareas/tarea_2/test/test.cpp > CMakeFiles/test.dir/test/test.cpp.i
 
 CMakeFiles/test.dir/test/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test/test.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/tareas/tarea_2/test/test.cpp -o CMakeFiles/test.dir/test/test.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/Desktop/tareas/tarea_2/test/test.cpp -o CMakeFiles/test.dir/test/test.cpp.s
 
 CMakeFiles/test.dir/src/maze.cpp.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/src/maze.cpp.o: ../src/maze.cpp
 CMakeFiles/test.dir/src/maze.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/src/maze.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/maze.cpp.o -MF CMakeFiles/test.dir/src/maze.cpp.o.d -o CMakeFiles/test.dir/src/maze.cpp.o -c /home/edauandes/tareas/tarea_2/src/maze.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test.dir/src/maze.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/maze.cpp.o -MF CMakeFiles/test.dir/src/maze.cpp.o.d -o CMakeFiles/test.dir/src/maze.cpp.o -c /home/edauandes/Desktop/tareas/tarea_2/src/maze.cpp
 
 CMakeFiles/test.dir/src/maze.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/maze.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/tareas/tarea_2/src/maze.cpp > CMakeFiles/test.dir/src/maze.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/Desktop/tareas/tarea_2/src/maze.cpp > CMakeFiles/test.dir/src/maze.cpp.i
 
 CMakeFiles/test.dir/src/maze.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/maze.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/tareas/tarea_2/src/maze.cpp -o CMakeFiles/test.dir/src/maze.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/Desktop/tareas/tarea_2/src/maze.cpp -o CMakeFiles/test.dir/src/maze.cpp.s
+
+CMakeFiles/test.dir/src/pair.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/pair.cpp.o: ../src/pair.cpp
+CMakeFiles/test.dir/src/pair.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test.dir/src/pair.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/pair.cpp.o -MF CMakeFiles/test.dir/src/pair.cpp.o.d -o CMakeFiles/test.dir/src/pair.cpp.o -c /home/edauandes/Desktop/tareas/tarea_2/src/pair.cpp
+
+CMakeFiles/test.dir/src/pair.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/pair.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/Desktop/tareas/tarea_2/src/pair.cpp > CMakeFiles/test.dir/src/pair.cpp.i
+
+CMakeFiles/test.dir/src/pair.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/pair.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/Desktop/tareas/tarea_2/src/pair.cpp -o CMakeFiles/test.dir/src/pair.cpp.s
+
+CMakeFiles/test.dir/src/node.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/node.cpp.o: ../src/node.cpp
+CMakeFiles/test.dir/src/node.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.dir/src/node.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/node.cpp.o -MF CMakeFiles/test.dir/src/node.cpp.o.d -o CMakeFiles/test.dir/src/node.cpp.o -c /home/edauandes/Desktop/tareas/tarea_2/src/node.cpp
+
+CMakeFiles/test.dir/src/node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/node.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/Desktop/tareas/tarea_2/src/node.cpp > CMakeFiles/test.dir/src/node.cpp.i
+
+CMakeFiles/test.dir/src/node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/node.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/Desktop/tareas/tarea_2/src/node.cpp -o CMakeFiles/test.dir/src/node.cpp.s
+
+CMakeFiles/test.dir/src/queue.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/queue.cpp.o: ../src/queue.cpp
+CMakeFiles/test.dir/src/queue.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.dir/src/queue.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/queue.cpp.o -MF CMakeFiles/test.dir/src/queue.cpp.o.d -o CMakeFiles/test.dir/src/queue.cpp.o -c /home/edauandes/Desktop/tareas/tarea_2/src/queue.cpp
+
+CMakeFiles/test.dir/src/queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/queue.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/Desktop/tareas/tarea_2/src/queue.cpp > CMakeFiles/test.dir/src/queue.cpp.i
+
+CMakeFiles/test.dir/src/queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/queue.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/Desktop/tareas/tarea_2/src/queue.cpp -o CMakeFiles/test.dir/src/queue.cpp.s
+
+CMakeFiles/test.dir/src/stack.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/src/stack.cpp.o: ../src/stack.cpp
+CMakeFiles/test.dir/src/stack.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.dir/src/stack.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/src/stack.cpp.o -MF CMakeFiles/test.dir/src/stack.cpp.o.d -o CMakeFiles/test.dir/src/stack.cpp.o -c /home/edauandes/Desktop/tareas/tarea_2/src/stack.cpp
+
+CMakeFiles/test.dir/src/stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/src/stack.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edauandes/Desktop/tareas/tarea_2/src/stack.cpp > CMakeFiles/test.dir/src/stack.cpp.i
+
+CMakeFiles/test.dir/src/stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/src/stack.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edauandes/Desktop/tareas/tarea_2/src/stack.cpp -o CMakeFiles/test.dir/src/stack.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/test/test.cpp.o" \
-"CMakeFiles/test.dir/src/maze.cpp.o"
+"CMakeFiles/test.dir/src/maze.cpp.o" \
+"CMakeFiles/test.dir/src/pair.cpp.o" \
+"CMakeFiles/test.dir/src/node.cpp.o" \
+"CMakeFiles/test.dir/src/queue.cpp.o" \
+"CMakeFiles/test.dir/src/stack.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/test/test.cpp.o
 test: CMakeFiles/test.dir/src/maze.cpp.o
+test: CMakeFiles/test.dir/src/pair.cpp.o
+test: CMakeFiles/test.dir/src/node.cpp.o
+test: CMakeFiles/test.dir/src/queue.cpp.o
+test: CMakeFiles/test.dir/src/stack.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edauandes/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +185,6 @@ CMakeFiles/test.dir/clean:
 .PHONY : CMakeFiles/test.dir/clean
 
 CMakeFiles/test.dir/depend:
-	cd /home/edauandes/tareas/tarea_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edauandes/tareas/tarea_2 /home/edauandes/tareas/tarea_2 /home/edauandes/tareas/tarea_2/build /home/edauandes/tareas/tarea_2/build /home/edauandes/tareas/tarea_2/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/edauandes/Desktop/tareas/tarea_2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edauandes/Desktop/tareas/tarea_2 /home/edauandes/Desktop/tareas/tarea_2 /home/edauandes/Desktop/tareas/tarea_2/build /home/edauandes/Desktop/tareas/tarea_2/build /home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles/test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test.dir/depend
 

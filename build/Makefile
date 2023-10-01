@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edauandes/tareas/tarea_2
+CMAKE_SOURCE_DIR = /home/edauandes/Desktop/tareas/tarea_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edauandes/tareas/tarea_2/build
+CMAKE_BINARY_DIR = /home/edauandes/Desktop/tareas/tarea_2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edauandes/tareas/tarea_2/build/CMakeFiles /home/edauandes/tareas/tarea_2/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles /home/edauandes/Desktop/tareas/tarea_2/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edauandes/tareas/tarea_2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edauandes/Desktop/tareas/tarea_2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,102 @@ src/maze.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/maze.cpp.s
 .PHONY : src/maze.cpp.s
 
+src/node.o: src/node.cpp.o
+.PHONY : src/node.o
+
+# target to build an object file
+src/node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/node.cpp.o
+.PHONY : src/node.cpp.o
+
+src/node.i: src/node.cpp.i
+.PHONY : src/node.i
+
+# target to preprocess a source file
+src/node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/node.cpp.i
+.PHONY : src/node.cpp.i
+
+src/node.s: src/node.cpp.s
+.PHONY : src/node.s
+
+# target to generate assembly for a file
+src/node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/node.cpp.s
+.PHONY : src/node.cpp.s
+
+src/pair.o: src/pair.cpp.o
+.PHONY : src/pair.o
+
+# target to build an object file
+src/pair.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/pair.cpp.o
+.PHONY : src/pair.cpp.o
+
+src/pair.i: src/pair.cpp.i
+.PHONY : src/pair.i
+
+# target to preprocess a source file
+src/pair.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/pair.cpp.i
+.PHONY : src/pair.cpp.i
+
+src/pair.s: src/pair.cpp.s
+.PHONY : src/pair.s
+
+# target to generate assembly for a file
+src/pair.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/pair.cpp.s
+.PHONY : src/pair.cpp.s
+
+src/queue.o: src/queue.cpp.o
+.PHONY : src/queue.o
+
+# target to build an object file
+src/queue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/queue.cpp.o
+.PHONY : src/queue.cpp.o
+
+src/queue.i: src/queue.cpp.i
+.PHONY : src/queue.i
+
+# target to preprocess a source file
+src/queue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/queue.cpp.i
+.PHONY : src/queue.cpp.i
+
+src/queue.s: src/queue.cpp.s
+.PHONY : src/queue.s
+
+# target to generate assembly for a file
+src/queue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/queue.cpp.s
+.PHONY : src/queue.cpp.s
+
+src/stack.o: src/stack.cpp.o
+.PHONY : src/stack.o
+
+# target to build an object file
+src/stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/stack.cpp.o
+.PHONY : src/stack.cpp.o
+
+src/stack.i: src/stack.cpp.i
+.PHONY : src/stack.i
+
+# target to preprocess a source file
+src/stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/stack.cpp.i
+.PHONY : src/stack.cpp.i
+
+src/stack.s: src/stack.cpp.s
+.PHONY : src/stack.s
+
+# target to generate assembly for a file
+src/stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/stack.cpp.s
+.PHONY : src/stack.cpp.s
+
 test/test.o: test/test.cpp.o
 .PHONY : test/test.o
 
@@ -189,6 +285,18 @@ help:
 	@echo "... src/maze.o"
 	@echo "... src/maze.i"
 	@echo "... src/maze.s"
+	@echo "... src/node.o"
+	@echo "... src/node.i"
+	@echo "... src/node.s"
+	@echo "... src/pair.o"
+	@echo "... src/pair.i"
+	@echo "... src/pair.s"
+	@echo "... src/queue.o"
+	@echo "... src/queue.i"
+	@echo "... src/queue.s"
+	@echo "... src/stack.o"
+	@echo "... src/stack.i"
+	@echo "... src/stack.s"
 	@echo "... test/test.o"
 	@echo "... test/test.i"
 	@echo "... test/test.s"
