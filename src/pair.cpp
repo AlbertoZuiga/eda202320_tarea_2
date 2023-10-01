@@ -1,6 +1,4 @@
-/*
- * pair.cpp
- */
+//pair.cpp
 
 #include "lLists/pair.hpp"
 #include <iostream>
@@ -39,4 +37,4 @@ Pair::~Pair() {
 
 }
 
-} 
+}

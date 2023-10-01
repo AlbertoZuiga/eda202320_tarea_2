@@ -209,7 +209,7 @@ void Maze::solveStack(int r1, int c1, int r2, int c2) {
             }
         }
     }
-	if (grid[r1][c1]==2){
+	if (grid[r1][c1]!=2){
 		std::cout << "El laberinto no tiene solucion" << std::endl;
 	}
 }
@@ -238,12 +238,12 @@ void Maze::solveQueue(int r1, int c1, int r2, int c2) {
 			grid[r2][c2] = 3;
 			current = solutionPath.back().prev;
             while (!solutionPath.empty()) {
-                row = current->getRow();
-				col = current->getCol();
 				if (current == solutionPath.back().curr){
 					grid[row][col] = 3;
 					current = solutionPath.back().prev;
 				}
+                row = current->getRow();
+				col = current->getCol();
 				solutionPath.pop_back();
             }
             break;
@@ -274,9 +274,10 @@ void Maze::solveQueue(int r1, int c1, int r2, int c2) {
             next_col = col + dcol;
 
             if (inRange(next_row, next_col) && grid[next_row][next_col] == 0 && !visited[next_row][next_col]) {
-                queue.push(next_row, next_col);
+                llist::Node* temp = new llist::Node(next_row, next_col);
+				queue.push(temp);
                 visited[next_row][next_col] = true;
-                solutionPath.push_back(llist::CellPair(current, queue.top()->getData()));
+                solutionPath.push_back(llist::CellPair(current, temp->getData()));
             }
         }
     }

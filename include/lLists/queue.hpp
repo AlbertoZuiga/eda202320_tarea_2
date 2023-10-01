@@ -1,7 +1,4 @@
-/*
- * queue.hpp
- *
- */
+// queue.hpp
 
 #ifndef QUEUE_HPP_
 #define QUEUE_HPP_
@@ -25,6 +22,6 @@ public:
 	virtual ~Queue();
 };
 
-} /* namespace eda */
+} // namespace llist
 
 #endif /* QUEUE_HPP_ */

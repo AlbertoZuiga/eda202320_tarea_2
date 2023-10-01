@@ -1,6 +1,4 @@
-/*
- * stack.cpp
- */
+//stack.cpp
 
 #include "lLists/stack.hpp"
 #include <iostream>
@@ -8,8 +6,6 @@
 namespace llist {
 
 Stack::Stack():head(nullptr) {
-	// TODO Auto-generated constructor stub
-
 }
 
 void Stack::push(int col, int row){
@@ -45,8 +41,7 @@ void Stack::clear(){
 }
 
 Stack::~Stack() {
-	std::cout<<"destructor Stack"<<std::endl;
 	clear();
 }
 
-} 
+}

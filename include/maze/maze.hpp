@@ -1,6 +1,8 @@
-/**
- * Classe Maze
- */
+// maze.hpp
+
+#ifndef MAZE_HPP_
+#define MAZE_HPP_
+
 #include <vector>
 
 namespace maze {
@@ -32,4 +34,6 @@ namespace maze {
 		void solveStack(int f1, int c1, int f2, int c2);
 		void solveQueue(int r1, int c1, int r2, int c2);
 	};
-}
+} // namespace maze
+
+#endif /* MAZE_HPP_ */

@@ -1,17 +1,10 @@
-/*
- * queue.cpp
- *
- *  Created on: Aug 18, 2022
- *      Author: jsaavedr
- */
+// queue.cpp
 
 #include "lLists/queue.hpp"
 
 namespace llist {
 
 Queue::Queue():head(nullptr), tail(nullptr) {
-	// TODO Auto-generated constructor stub
-
 }
 
 void Queue::push(int row, int col){
@@ -59,4 +52,4 @@ Queue::~Queue() {
 	clear();
 }
 
-} /* namespace eda */
+}

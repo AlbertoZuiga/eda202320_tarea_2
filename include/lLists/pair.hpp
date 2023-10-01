@@ -1,7 +1,4 @@
-/*
- * pair.hpp
- *
- */
+// pair.hpp
 
 #ifndef PAIR_HPP_
 #define PAIR_HPP_
@@ -31,6 +28,6 @@ struct CellPair {
 	CellPair(Pair* prev, Pair* curr) : prev(prev), curr(curr) {}
 };
 
-} /* namespace llist */
+} // namespace llist
 
 #endif /* PAIR_HPP_ */

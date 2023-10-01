@@ -1,6 +1,4 @@
-/*
- * nodo.cpp
- */
+//nodo.cpp
 
 #include "lLists/node.hpp"
 #include "lLists/pair.hpp"
@@ -41,4 +39,4 @@ Node::~Node() {
 
 }
 
-} 
+}

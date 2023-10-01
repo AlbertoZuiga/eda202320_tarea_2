@@ -1,9 +1,4 @@
-/*
- * stack.hpp
- *
- *  Created on: Aug 18, 2022
- *      Author: jsaavedr
- */
+// stack.hpp
 
 #ifndef STACK_HPP_
 #define STACK_HPP_
@@ -27,6 +22,6 @@ public:
 	virtual ~Stack();
 };
 
-} /* namespace eda */
+} // namespace llist
 
 #endif /* STACK_HPP_ */
