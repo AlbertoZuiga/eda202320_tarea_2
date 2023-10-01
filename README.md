@@ -11,7 +11,7 @@ En esta subcarpeta, realicé los siguientes cambios:
 - Creé el archivo `pair.hpp` para declarar la clase con el mismo nombre.
 - Modifiqué las clases contenidas en los archivos `node.hpp`, `queue.hpp` y `stack.hpp` para que los nodos acepten un elemento de la clase `Pair` en lugar de un entero, como estaba configurado originalmente en el repositorio del profesor.
 
-#### Carpeta `maze/maze.hpp`
+#### Archivo `maze/maze.hpp`
 En este archivo, declaré los nuevos métodos necesarios para la ejecución de la tarea:
 
 1. `void print(std::vector<llist::Pair> solution);`: Esta función ya estaba declarada, pero creé un método adicional para imprimir el vector de pares que contiene la solución, junto con la cantidad de nodos que se recorrieron para llegar a la solución (solo los necesarios).
